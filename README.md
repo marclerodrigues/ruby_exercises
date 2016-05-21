@@ -1,2 +1,2 @@
 # ruby_exercises
-CodeAbbey Problems
+Solutions written in Ruby for CodeAbbey Problems
