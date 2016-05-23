@@ -1,0 +1,21 @@
+data = IO.read('arithmetic_progression_data.txt')
+data = data.split("\n")
+results = []
+data.delete_at(0)
+for i in 0...data.size
+	data[i] = data[i].split(" ")
+	for n in 0...data[i].size
+		data[i][n] = data[i][n].to_i
+	end
+end
+
+for i in 0...data.size
+	first = data[i][0]
+	step = data[i][1]
+	n = data[i][2]
+	last = first + (n-1) * step
+	sum = n * (first+last) / 2
+	results.push(sum)
+end
+
+p results.join " "
