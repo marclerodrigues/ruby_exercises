@@ -1,0 +1,20 @@
+data = IO.read('weighted_sum_of_digits_data.txt')
+data = data.split("\n")
+new_values = []
+data.delete_at(0)
+for i in 0...data.size
+	data[i] = data[i].split(" ")
+end
+
+data.each do |value| 
+	value.each do |number| 
+		number = number.split("")
+		total = 0
+		for i in 0...number.size
+			total += number[i].to_i * (i + 1)
+		end
+		new_values.push(total)
+	end
+end
+
+p new_values.join " "
